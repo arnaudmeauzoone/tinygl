@@ -37,7 +37,7 @@ UI_INCLUDES=
 #UI_LIBS= -L/usr/X11/lib -lX11 -lXext -lsocket -lnsl
 #UI_INCLUDES= 
 
-UI_OBJS=x11.o
+UI_OBJS=ui_fb.o
 endif
 
 #####################################################################
