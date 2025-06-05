@@ -12,7 +12,6 @@
 #include <stdio.h>
 #include <string.h>
 
-#include <GL/glx.h> 
 #include <GL/gl.h> 
 #include "ui.h"
 
@@ -200,38 +199,6 @@ void idle( void )
    angle += 2.0;
    draw();
 }
-
-
-
-/* change view angle, exit upon ESC */
-GLenum key(int k, GLenum mask)
-{
-   switch (k) {
-      case KEY_UP:
-         view_rotx += 5.0;
-	 return GL_TRUE;
-      case KEY_DOWN:
-         view_rotx -= 5.0;
-	 return GL_TRUE;
-      case KEY_LEFT:
-         view_roty += 5.0;
-	 return GL_TRUE;
-      case KEY_RIGHT:
-         view_roty -= 5.0;
-	 return GL_TRUE;
-      case 'z':
-	 view_rotz += 5.0;
-	 return GL_TRUE;
-      case 'Z':
-	 view_rotz -= 5.0;
-	 return GL_TRUE;
-      case KEY_ESCAPE:
-          exit(0);
-   }
-   return GL_FALSE;
-}
-
-
 
 /* new window size or exposure */
 void reshape( int width, int height )
