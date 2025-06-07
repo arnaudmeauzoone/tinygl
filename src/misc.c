@@ -47,7 +47,7 @@ void glopEnableDisable(GLContext *c,GLParam *p)
 
   switch(code) {
   case GL_CULL_FACE:
-    c->cull_face_enabled=v;
+    c->cull_face_enabled=0;
     break;
   case GL_LIGHTING:
     c->lighting_enabled=v;

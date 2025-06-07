@@ -1,3 +1,4 @@
+
 /*
  * We draw a triangle with various interpolations
  */
@@ -349,6 +350,8 @@
       /* screen coordinates */
       pp1=(PIXEL *)((char *)pp1 + zb->linesize);
       pz1+=zb->xsize;
+      // usleep(10000);
+      // tkSwapBuffers();
     }
   }
 }

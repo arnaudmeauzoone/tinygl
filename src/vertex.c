@@ -347,18 +347,5 @@ void glopVertex(GLContext * c, GLParam * p)
 
 void glopEnd(GLContext * c, GLParam * param)
 {
-    assert(c->in_begin == 1);
-
-    if (c->begin_type == GL_LINE_LOOP) {
-	if (c->vertex_cnt >= 3) {
-	    gl_draw_line(c, &c->vertex[0], &c->vertex[2]);
-	}
-    } else if (c->begin_type == GL_POLYGON) {
-	int i = c->vertex_cnt;
-	while (i >= 3) {
-	    i--;
-	    gl_draw_triangle(c, &c->vertex[i], &c->vertex[0], &c->vertex[i - 1]);
-	}
-    }
     c->in_begin = 0;
 }
